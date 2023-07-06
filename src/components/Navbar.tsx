@@ -47,9 +47,13 @@ export default function Navbar() {
             </li>
           ))}
           {session ? (
-            <ColorButton text="Sign out" onClick={() => signOut()} />
+            <ColorButton
+              text="Sign out"
+              onClick={() => signOut()}
+              size="small"
+            />
           ) : (
-            <ColorButton text="Sign in" onClick={() => signIn()} />
+            <ColorButton text="Sign in" onClick={() => signIn()} size="small" />
           )}
         </ul>
       </nav>
