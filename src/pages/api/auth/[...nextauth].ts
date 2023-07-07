@@ -9,6 +9,18 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
+  callback: {
+    async session({ session }) {
+      const user = session?.user;
+      if (user) {
+        session.user = {
+          ...user,
+          username: user.email?.split("@")[0] || "",
+        };
+      }
+      return session;
+    },
+  },
   pages: {
     signIn: "/auth/signin",
   },
