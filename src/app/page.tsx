@@ -1,5 +1,5 @@
 import FollowingBar from "@/components/ui/FollowingBar";
-import PostList from "@/components/ui/PostList";
+import PostList from "@/components/PostList";
 import SideBar from "@/components/ui/SideBar";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { getServerSession } from "next-auth";

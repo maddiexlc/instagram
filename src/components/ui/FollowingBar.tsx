@@ -3,7 +3,6 @@ import { DetailUser } from "@/model/user";
 import React from "react";
 import { PropagateLoader } from "react-spinners";
 import useSWR from "swr";
-import page from "../../app/search/page";
 import Link from "next/link";
 import Avartar from "./Avartar";
 import ScrollableBar from "./ScrollableBar";
