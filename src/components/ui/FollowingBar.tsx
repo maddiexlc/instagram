@@ -4,7 +4,7 @@ import React from "react";
 import { PropagateLoader } from "react-spinners";
 import useSWR from "swr";
 import Link from "next/link";
-import Avartar from "./Avartar";
+import Avartar from "./Avatar";
 import ScrollableBar from "./ScrollableBar";
 
 export default function FollowingBar() {
@@ -26,7 +26,7 @@ export default function FollowingBar() {
               className="flex flex-col items-center w-20"
               href={`/user/${username}`}
             >
-              <Avartar image={image} highlight />
+              <Avartar size="large" image={image} highlight />
               <p className="w-full text-sm text-center text-ellipsis overflow-hidden">
                 {username}
               </p>

@@ -1,6 +1,6 @@
 import React from "react";
 import { User } from "@/model/user";
-import Avartar from "./Avartar";
+import Avartar from "./Avatar";
 
 type Props = {
   user: User;
