@@ -1,5 +1,3 @@
-import React from "react";
-
-export default function page() {
-  return <div>this is new page</div>;
+export default function NewPostPage() {
+  return <p>New Post Page</p>;
 }

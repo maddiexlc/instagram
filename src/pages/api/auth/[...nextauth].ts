@@ -1,14 +1,12 @@
-import { addUser } from "@/service/user";
-import NextAuth, { NextAuthOptions } from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
+import { addUser } from '@/service/user';
+import NextAuth, { NextAuthOptions } from 'next-auth';
+import GoogleProvider from 'next-auth/providers/google';
 export const authOptions: NextAuthOptions = {
-  // Configure one or more authentication providers
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_OAUTH_ID || "",
-      clientSecret: process.env.GOOGLE_OAUTH_SECRET || "",
+      clientId: process.env.GOOGLE_OAUTH_ID || '',
+      clientSecret: process.env.GOOGLE_OAUTH_SECRET || '',
     }),
-    // ...add more providers here
   ],
   callbacks: {
     async signIn({ user: { id, name, image, email } }) {
@@ -17,10 +15,10 @@ export const authOptions: NextAuthOptions = {
       }
       addUser({
         id,
-        name: name || "",
+        name: name || '',
         image,
         email,
-        username: email.split("@")[0],
+        username: email.split('@')[0],
       });
       return true;
     },
@@ -29,14 +27,14 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         session.user = {
           ...user,
-          username: user.email?.split("@")[0] || "",
+          username: user.email?.split('@')[0] || '',
         };
       }
       return session;
     },
   },
   pages: {
-    signIn: "/auth/signin",
+    signIn: '/auth/signin',
   },
 };
 export default NextAuth(authOptions);

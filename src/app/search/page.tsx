@@ -1,5 +1,3 @@
-import React from "react";
-
-export default function page() {
-  return <div>this is search page</div>;
+export default function SearchPage() {
+  return <p>Search Page</p>;
 }

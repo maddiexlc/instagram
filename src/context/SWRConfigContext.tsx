@@ -1,5 +1,6 @@
-"use client";
-import { SWRConfig } from "swr";
+'use client';
+
+import { SWRConfig } from 'swr';
 
 type Props = {
   children: React.ReactNode;
